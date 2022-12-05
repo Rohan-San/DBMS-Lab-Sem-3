@@ -1,0 +1,21 @@
+create table EMPLOYEE(
+    -> Fname varchar(30),
+    -> Minit varchar(30),
+    -> Lname varchar(30),
+    -> Ssn int primary key,
+    -> Bdate date,
+    -> Address varchar(50),
+    -> Sex char,
+    -> Salary int,
+    -> Super_ssn int,
+    -> Dno int);
+
+create table DEPARTMENT( Dname varchar(30), Dnumber int primary key, Mgr_ssn int, Mgr_start_date date);
+
+create table DEPT_LOCATIONS( Dnumber int, Dlocation varchar(50) primary key);
+
+create table PROJECT(Pname varchar(30), Pnumber int primary key, Plocation varchar(50), Dnum int);
+
+create table WORKS_ON( Essn int primary key, Pno int, Hours int);
+
+create table DEPENDENT( Essn int primary key, Dependent_name varchar(50), Sex char(1), Bdate date, Relationship varchar(30));
